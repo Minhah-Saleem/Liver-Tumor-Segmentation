@@ -4,6 +4,13 @@ Segmentation of Liver Tumor using HDense on LITS Dataset <br />
 The LITS dataset contains CT scans of patients and annotations for tumor and liver segmentation masks. Whole dataset includes 130 scans. <br />
 Link to dataset used: https://academictorrents.com/details/27772adef6f563a1ecc0ae19a528b956e6c803ce <br />
 <br /> 
+## Prediction model
+*Main model predicts tumor and  liver mask by taking in sequence of frames of scans. First of all model make prediction on full scan sequence by sequency by moving window of those sequnce in 50% overlap and finalliny all predictions are concatinated.*
+## Post processing
+*In post processing any spaces in liver mask are filled using computer vision techniques and tumor outside the liver are discarded*
+
+## Results presentation
+*Finally using liver mask and tumor mask countours are made on actual scans and discription of those scans are saved in dicom format*
 ### Results:
 Dice Score achieved: 71% <br />
 <br /> 
